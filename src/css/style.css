@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+/* Area de Pesquisa */
+
+header {
+  border-bottom: 5px solid orange;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70px;
+  padding: 0 20px;
+}
+
+#header a {
+  text-decoration: none;
+  color: white;
+}
+
+#header h1 {
+  font-size: 2rem;
+}
+
+#search {
+  position: relative;
+  width: 350px;
+}
+
+#search i {
+  color: black;
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  transition: 1s;
+}
+#search i:hover {
+  color: orange;
+}
+
+#input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 25px;
+  outline: none;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid lightgray;
+}
+#input:focus {
+  box-shadow: 0 0 5px orange;
+  border: 1px solid orange;
+}
+
+/* Area de Imagens */
+
+#grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+/* Img a serem geradas */
+
+.img {
+  width: 380px;
+  height: 200px;
+  margin-top: 15px;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 2px;
+}
+
+/* Resoluções */
+
+@media (max-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 95%;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  #header {
+    justify-content: center;
+    padding: 20px 0;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  #header h1 {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #header h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  #search {
+    width: 80%;
+    margin: auto;
+  }
+  #input {
+    font-size: 0.7rem;
+  }
+}
